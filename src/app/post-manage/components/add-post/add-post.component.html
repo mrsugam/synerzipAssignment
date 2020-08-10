@@ -1,0 +1,25 @@
+<form class="example-form" [formGroup]="formGroup" (submit)="submitForm()">
+  <mat-form-field class="example-full-width">
+    <mat-label>UserId</mat-label>
+    <input matInput type="text" name="userId" formControlName="userId" id="userId">
+    <div *ngIf="userId.touched && userId.errors?.required" class="text-danger">This field is required</div>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>Id</mat-label>
+  <input matInput type="text" name="id" formControlName="id" id="id">
+  <div *ngIf="id.touched && id.errors?.required" class="text-danger">This field is required</div>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>Title</mat-label>
+  <input matInput type="text" name="title" formControlName="title" id="title">
+  <div *ngIf="title.touched && title.errors?.required" class="text-danger">This field is required</div>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Body</mat-label>
+  <input matInput type="text" name="body" formControlName="body" id="body">
+  <div *ngIf="body.touched && body.errors?.required" class="text-danger">This field is required</div>
+  </mat-form-field>
+
+  <button type="submit" mat-raised-button color="primary">Submit</button>
+</form>

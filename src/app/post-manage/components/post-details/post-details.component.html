@@ -1,0 +1,21 @@
+<h2>Post Details</h2>
+
+<hr/>
+<div *ngIf="post">
+  <div>
+    <label><b>Userid: </b></label> {{post.userId}}
+  </div>
+  <div>
+    <label><b>Id: </b></label> {{post.id}}
+  </div>
+  <div>
+    <label><b>Title: </b></label> {{post.title}}
+  </div>
+  <div>
+    <label><b>Body: </b></label> {{post.body}}
+  </div>
+</div>
+
+<br>
+<br>
+<button mat-raised-button color="primary" routerLink="/post-list">Back to Post List</button>

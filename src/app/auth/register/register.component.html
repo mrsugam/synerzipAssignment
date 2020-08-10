@@ -1,0 +1,31 @@
+<form class="example-form" (ngSubmit)="onSubmit(registerForm)" [formGroup]="formGroup" #registerForm="ngForm" >
+  <mat-form-field class="example-full-width">
+    <mat-label>Name</mat-label>
+    <input matInput type="text" formControlName="name" name="name"  id="name">
+  </mat-form-field>
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Email</mat-label>
+  <input matInput type="text" formControlName="email" name="email" id="email">
+  </mat-form-field>
+  <br>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Password</mat-label>
+  <input matInput type="password" formControlName="password" name="password" id="password">
+  </mat-form-field>
+  <br>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Conform Password</mat-label>
+  <input matInput type="password" formControlName="cnf_password" name="cnf_password" id="cnf_password">
+  </mat-form-field>
+  <br>
+
+  <section class="example-section">
+    <mat-checkbox name="term" formControlName="term" id="term" class="example-margin">Accept Term & Condition</mat-checkbox>
+  </section>
+  <button type="submit" [disabled]="!registerForm.valid"  mat-raised-button color="primary" routerLink="">
+    Register
+  </button>
+</form>
